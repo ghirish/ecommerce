@@ -1,0 +1,11 @@
+node_modules
+.next
+.vercel
+dist
+build
+*.lock
+*.log
+.env*
+coverage
+.nyc_output
+.cache 

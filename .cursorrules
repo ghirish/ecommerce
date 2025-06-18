@@ -1,0 +1,152 @@
+# Cursor Rules
+
+## Instructions
+
+- Record fixes for mistakes or corrections to avoid repetition in the `Lessons` section.
+- Organize thoughts and plan steps before starting a task in the `Scratchpad` section.
+- Clear old tasks if necessary.
+- Use todo markers for progress tracking:
+  - `[X]` Completed tasks
+  - `[ ]` Pending tasks
+- Update Scratchpad after completing subtasks.
+- Reflect and plan after milestones for better task management.
+- Always refer to Scratchpad before planning the next step.
+
+## Lessons
+
+## Scratchpad
+
+
+### Phase 1: Project Setup & Configuration
+- [X] Initialize Next.js 15 project with TypeScript
+- [X] Install and configure essential dependencies (Shadcn, Lucide, Zod, Zustand)
+- [X] Set up Tailwind CSS and Shadcn UI components
+- [X] Configure ESLint, Prettier, and TypeScript strict mode
+- [X] Set up project folder structure (components, lib, types, etc.)
+- [X] Create environment variables template
+
+### Phase 2: Database & ORM Setup
+- [ ] Set up PostgreSQL database (local/cloud)
+- [ ] Install and configure Prisma ORM
+- [ ] Design database schema for ecommerce (users, products, orders, categories, etc.)
+- [ ] Create Prisma migrations
+- [ ] Set up database seeding scripts
+- [ ] Test database connection and basic queries
+
+### Phase 3: Authentication System
+- [ ] Install and configure next-auth@beta
+- [ ] Set up authentication providers (Google, GitHub, email/password)
+- [ ] Create authentication pages (login, register, forgot password)
+- [ ] Implement user roles (customer, admin, vendor)
+- [ ] Create protected route middleware
+- [ ] Design user profile management
+
+### Phase 4: Core UI Components & Layout
+- [ ] Create responsive header with navigation
+- [ ] Design footer with links and information
+- [ ] Implement search bar with filters
+- [ ] Create product card components
+- [ ] Design shopping cart sidebar/modal
+- [ ] Build responsive layout components
+- [ ] Add dark/light theme toggle
+
+### Phase 5: Product Management System
+- [ ] Create product catalog pages with pagination
+- [ ] Implement product detail pages with image gallery
+- [ ] Add product search and filtering (category, price, rating)
+- [ ] Create product review and rating system
+- [ ] Implement wishlist functionality
+- [ ] Add product comparison feature
+- [ ] Set up product recommendations
+
+### Phase 6: Shopping Cart & Checkout
+- [ ] Implement Zustand store for cart management
+- [ ] Create add to cart functionality
+- [ ] Design cart page with quantity updates
+- [ ] Build checkout flow (shipping, billing, review)
+- [ ] Add address management system
+- [ ] Implement shipping calculations
+- [ ] Create order summary components
+
+### Phase 7: Payment Integration
+- [ ] Set up Stripe account and configure webhooks
+- [ ] Install and configure Stripe SDK
+- [ ] Implement payment processing
+- [ ] Add multiple payment methods support
+- [ ] Create payment success/failure pages
+- [ ] Set up refund functionality
+- [ ] Add payment history tracking
+
+### Phase 8: Order Management
+- [ ] Create order creation and tracking system
+- [ ] Implement order status updates
+- [ ] Design order history pages
+- [ ] Add order cancellation functionality
+- [ ] Create invoice generation
+- [ ] Set up order notifications
+- [ ] Implement return/exchange system
+
+### Phase 9: Admin Dashboard
+- [ ] Create admin layout with sidebar navigation
+- [ ] Build analytics dashboard with Recharts
+- [ ] Implement product management (CRUD operations)
+- [ ] Add order management interface
+- [ ] Create user management system
+- [ ] Design inventory tracking
+- [ ] Add sales reports and analytics
+- [ ] Implement bulk operations
+
+### Phase 10: File Upload & Media Management
+- [ ] Set up Uploadthing for image uploads
+- [ ] Create image upload components
+- [ ] Implement multiple image upload for products
+- [ ] Add image optimization and resizing
+- [ ] Create media library for admin
+- [ ] Set up CDN integration
+- [ ] Add file validation and security
+
+## Phase 11: Email & Notifications
+- [ ] Configure Resend for email services
+- [ ] Create email templates (welcome, order confirmation, etc.)
+- [ ] Implement order notification system
+- [ ] Add password reset emails
+- [ ] Set up promotional email system
+- [ ] Create newsletter subscription
+- [ ] Add real-time notifications
+
+### Phase 12: Advanced Features
+- [ ] Implement multi-vendor marketplace
+- [ ] Add advanced search with Elasticsearch/Algolia
+- [ ] Create mobile app API endpoints
+- [ ] Add social media integration
+- [ ] Implement affiliate program
+- [ ] Add multi-language support
+- [ ] Create SEO optimization
+
+### Phase 13: Testing & Quality Assurance
+- [ ] Set up unit testing with Jest
+- [ ] Add integration tests for API routes
+- [ ] Implement E2E testing with Playwright
+- [ ] Add performance testing
+- [ ] Security audit and penetration testing
+- [ ] Cross-browser compatibility testing
+- [ ] Mobile responsiveness testing
+
+### Phase 14: Deployment & DevOps
+- [ ] Set up CI/CD pipeline
+- [ ] Configure production environment
+- [ ] Set up monitoring and logging
+- [ ] Implement error tracking (Sentry)
+- [ ] Add performance monitoring
+- [ ] Set up backup strategies
+- [ ] Create deployment documentation
+
+### Phase 15: Post-Launch & Optimization
+- [ ] Monitor application performance
+- [ ] Gather user feedback and analytics
+- [ ] Implement A/B testing for key features
+- [ ] Optimize database queries and caching
+- [ ] Add progressive web app features
+- [ ] Scale infrastructure as needed
+- [ ] Plan feature updates and roadmap
+
