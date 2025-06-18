@@ -26,12 +26,12 @@
 - [X] Create environment variables template
 
 ### Phase 2: Database & ORM Setup
-- [ ] Set up PostgreSQL database (local/cloud)
-- [ ] Install and configure Prisma ORM
-- [ ] Design database schema for ecommerce (users, products, orders, categories, etc.)
-- [ ] Create Prisma migrations
-- [ ] Set up database seeding scripts
-- [ ] Test database connection and basic queries
+- [X] Set up PostgreSQL database (local/cloud)
+- [X] Install and configure Prisma ORM
+- [X] Design database schema for ecommerce (users, products, orders, categories, etc.)
+- [X] Create Prisma migrations
+- [X] Set up database seeding scripts
+- [X] Test database connection and basic queries
 
 ### Phase 3: Authentication System
 - [ ] Install and configure next-auth@beta
