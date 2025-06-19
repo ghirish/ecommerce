@@ -30,20 +30,20 @@ import {
 const navigation = [
   {
     name: "Electronics",
-    href: "/categories/electronics",
+    href: "/products?category=Electronics",
     icon: Store,
     children: [
-      { name: "Smartphones", href: "/categories/smartphones", icon: Smartphone },
-      { name: "Laptops", href: "/categories/laptops", icon: Laptop },
+      { name: "Smartphones", href: "/products?category=Smartphones", icon: Smartphone },
+      { name: "Laptops", href: "/products?category=Laptops", icon: Laptop },
     ]
   },
   {
     name: "Clothing",
-    href: "/categories/clothing", 
+    href: "/products?category=Clothing", 
     icon: Shirt,
     children: [
-      { name: "Jeans", href: "/categories/jeans", icon: Shirt },
-      { name: "Shoes", href: "/categories/shoes", icon: Footprints },
+      { name: "Jeans", href: "/products?category=Jeans", icon: Shirt },
+      { name: "Shoes", href: "/products?category=Shoes", icon: Footprints },
     ]
   },
 ]

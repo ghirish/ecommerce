@@ -91,12 +91,12 @@ export default function CartPage() {
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
                   <Button variant="outline" asChild>
-                    <Link href="/categories/electronics">
+                    <Link href="/products?category=Electronics">
                       Browse Electronics
                     </Link>
                   </Button>
                   <Button variant="outline" asChild>
-                    <Link href="/categories/clothing">
+                    <Link href="/products?category=Clothing">
                       Browse Clothing
                     </Link>
                   </Button>

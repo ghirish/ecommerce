@@ -32,11 +32,12 @@ const footerLinks = {
     { name: "Size Guide", href: "/size-guide" },
   ],
   categories: [
-    { name: "Electronics", href: "/categories/electronics" },
-    { name: "Clothing", href: "/categories/clothing" },
-    { name: "Smartphones", href: "/categories/smartphones" },
-    { name: "Laptops", href: "/categories/laptops" },
-    { name: "Jeans", href: "/categories/jeans" },
+    { name: "Electronics", href: "/products?category=Electronics" },
+    { name: "Clothing", href: "/products?category=Clothing" },
+    { name: "Smartphones", href: "/products?category=Smartphones" },
+    { name: "Laptops", href: "/products?category=Laptops" },
+    { name: "Jeans", href: "/products?category=Jeans" },
+    { name: "Shoes", href: "/products?category=Shoes" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },

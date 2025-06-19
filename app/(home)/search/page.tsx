@@ -12,11 +12,27 @@ interface Product {
   id: string
   name: string
   price: number
+  compareAtPrice?: number
   images: string[]
   category: {
+    id?: string
     name: string
+    slug?: string
+    description?: string | null
+    image?: string | null
+    parentId?: string | null
+    children?: any[]
   }
-  createdAt: Date
+  categoryId: string
+  stock: number
+  sku: string
+  status: "ACTIVE" | "DRAFT" | "ARCHIVED"
+  rating?: number
+  reviewCount?: number
+  tags?: string[]
+  description?: string | null
+  createdAt?: Date
+  updatedAt?: Date
   _count?: {
     reviews: number
   }
@@ -56,7 +72,20 @@ function SearchResults() {
         }
         
         const result = await response.json()
-        setProducts(result.products || [])
+        // Transform API response to match our Product interface
+        const transformedProducts = (result.products || []).map((product: any) => ({
+          ...product,
+          categoryId: product.categoryId || product.category?.id || "",
+          stock: product.stock || 0,
+          sku: product.sku || product.id,
+          status: product.status || "ACTIVE",
+          rating: product.averageRating || product.rating || 0,
+          reviewCount: product._count?.reviews || product.reviewCount || 0,
+          tags: product.tags || [],
+          createdAt: product.createdAt ? new Date(product.createdAt) : new Date(),
+          updatedAt: product.updatedAt ? new Date(product.updatedAt) : new Date()
+        }))
+        setProducts(transformedProducts)
         setTotalPages(result.totalPages || 0)
         setTotalItems(result.totalCount || 0)
       } catch (error) {

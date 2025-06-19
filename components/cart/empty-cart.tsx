@@ -49,7 +49,7 @@ export default function EmptyCart() {
           {/* Category Quick Links */}
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Card className="group hover:shadow-md transition-all duration-200 cursor-pointer">
-              <Link href="/categories/electronics">
+              <Link href="/products?category=Electronics">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 mx-auto mb-3 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                     <Smartphone className="h-6 w-6 text-blue-600" />
@@ -63,7 +63,7 @@ export default function EmptyCart() {
             </Card>
 
             <Card className="group hover:shadow-md transition-all duration-200 cursor-pointer">
-              <Link href="/categories/clothing">
+              <Link href="/products?category=Clothing">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 mx-auto mb-3 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
                     <Shirt className="h-6 w-6 text-green-600" />
