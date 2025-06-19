@@ -14,6 +14,47 @@
 
 ## Lessons
 
+### Fixed TypeScript Errors in Authentication System (2024)
+- Fixed TypeScript error in signin/signup pages where `err.errors[0]` could be undefined
+  - Solution: Use optional chaining `err.errors[0]?.message || "Validation error"`
+- Fixed missing `role` property in auth.ts authorize function return value
+  - Solution: Added `role: user.role` to the returned user object
+- Fixed JWT token property access using bracket notation for dynamic properties
+  - Solution: Used `token["id"]` instead of `token.id` for index signature properties
+- Fixed profile page prerendering error during build
+  - Solution: Avoided destructuring `useSession()` directly, used intermediate variable instead
+  - Changed `const { data: session, status } = useSession()` to separate variable assignments
+- Added missing NEXTAUTH_SECRET configuration for production security
+  - Solution: Added `secret: process.env["NEXTAUTH_SECRET"]` to NextAuth config
+  - Important: Generate a secure random string for production deployment
+- Fixed Next.js 15 async params issue in dynamic routes
+  - Solution: Changed `params: { id: string }` to `params: Promise<{ id: string }>`
+  - Added `const { id } = await params` to handle async params properly
+- Fixed avatar field type mismatch in product reviews
+  - Solution: Transformed `null` values to `undefined` with `review.user.avatar || undefined`
+- Fixed array index access warning in TypeScript
+  - Solution: Added explicit bounds checking and non-null assertion `distribution[index]!++`
+- Fixed useSearchParams Suspense boundary requirement in Next.js 15
+  - Solution: Wrapped components using `useSearchParams` in Suspense boundaries
+  - Created separate content components and main page components for proper structure
+- Created root layout.tsx file to fix missing layout error
+  - Solution: Added root layout with HTML structure and SessionProvider
+  - Modified home layout to only handle page structure without HTML tags
+- Fixed Prisma client browser environment error in client components
+  - Solution: Created API routes for database operations instead of direct imports
+  - Added `/api/products` and `/api/categories` endpoints
+  - Updated client components to use fetch() instead of direct lib/products imports
+  - Server components can still use lib/products directly
+- Completed shopping cart implementation with Zustand (2024)
+  - Created cart page (`/cart`) with item management and checkout flow
+  - Built CartItem component with quantity controls and remove functionality
+  - Created CartSummary component with order totals and shipping calculations
+  - Added EmptyCart component with category links and value propositions
+  - Implemented AddToCartButton component for product grids and pages
+  - Created ProductCard component for consistent product display
+  - Cart persistence works automatically through Zustand middleware
+  - Real-time cart updates reflected in header badge
+
 ## Scratchpad
 
 
@@ -34,21 +75,53 @@
 - [X] Test database connection and basic queries
 
 ### Phase 3: Authentication System
-- [ ] Install and configure next-auth@beta
-- [ ] Set up authentication providers (Google, GitHub, email/password)
-- [ ] Create authentication pages (login, register, forgot password)
-- [ ] Implement user roles (customer, admin, vendor)
-- [ ] Create protected route middleware
-- [ ] Design user profile management
+- [X] Install and configure next-auth@beta
+- [X] Set up authentication providers (Google, GitHub, email/password)
+- [X] Create authentication pages (login, register, forgot password)
+- [X] Implement user roles (customer, admin, vendor)
+- [X] Create protected route middleware
+- [X] Design user profile management
 
 ### Phase 4: Core UI Components & Layout
-- [ ] Create responsive header with navigation
-- [ ] Design footer with links and information
-- [ ] Implement search bar with filters
-- [ ] Create product card components
-- [ ] Design shopping cart sidebar/modal
-- [ ] Build responsive layout components
-- [ ] Add dark/light theme toggle
+- [X] Home Layout:
+  - Create `(home)` folder in `app` directory
+  - Header with logo, search bar, and navigation
+  - Footer with links and social media
+- [X] Homepage:
+  - banner carousel
+  - latest products
+- [X] Products Catalog:
+  - Sidebar with categories and filters
+  - Search results
+  - Product grid
+  - Pagination
+- [X] Product pages:
+  - Create product detail page layout
+  - Implement image gallery with thumbnails
+  - Add product information section:
+    - Title, price, description
+    - Stock status
+    - Add to cart button
+  - Reviews and ratings section:
+    - Display existing reviews
+    - Add review form for authenticated users
+    - Star rating component
+  - Related products section:
+    - Show products from same category
+    - Product card carousel
+- [X] Shopping cart:
+  - Add/remove items
+  - Update quantities
+  - Cart persistence
+- [] Checkout process:
+  - Shipping information
+  - Payment integration (Stripe)
+  - Order confirmation
+- [] User dashboard:
+  - Order history
+  - Profile management
+  - Saved addresses
+  - Wishlist
 
 ### Phase 5: Product Management System
 - [ ] Create product catalog pages with pagination

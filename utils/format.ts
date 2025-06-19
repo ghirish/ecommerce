@@ -13,6 +13,17 @@ export function formatCurrency(
 }
 
 /**
+ * Format price as currency (alias for formatCurrency)
+ */
+export function formatPrice(
+  amount: number,
+  currency: string = "USD",
+  locale: string = "en-US"
+): string {
+  return formatCurrency(amount, currency, locale);
+}
+
+/**
  * Format a date to a readable string
  */
 export function formatDate(
